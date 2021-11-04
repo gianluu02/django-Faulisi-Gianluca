@@ -56,7 +56,11 @@ ROOT_URLCONF = 'primo_progetto.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+<<<<<<< Updated upstream
         'DIRS': [os.path.join(BASE_DIR, 'prima_app/templates')],
+=======
+        'DIRS': [os.path.join(BASE_DIR, 'seconda_app/templates')],
+>>>>>>> Stashed changes
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
