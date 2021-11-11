@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>es_for</title>
+</head>
+<body>
+    <p>Cicla una sequenza usando <b>forloop.counter</b></p>
+    <br>
+    {% for x in list2 %}
+        <i>{{ forloop.counter }}</i> : {{ x}}<br>
+    {%endfor%}
+    <br>
+
+    <p>Cicla una sequenza usando <b>forloop.counter0</b></p>
+    <br>
+    {% for x in list2 %}
+        <i>{{ forloop.counter0 }}</i> : {{ x}}<br>
+    {%endfor%}
+    <br>
+
+    <p>Stampa il primo elemento della sequenza usando <b>forloop.first</b></p>
+    <br>
+    {% for x in list2 %}
+        {% if forloop.first %}
+            <i>Il primo elemento</i> - {{ x }}
+        {%endif%}
+    {%endfor%}
+    <br>
+
+    <p>Stampa l'ultimo della sequenza usando <b>forloop.last</b></p>
+    <br>
+    {% for x in list2 %}
+        {% if forloop.last %}
+            <i>L'ultimo elemento</i> - {{ x }}
+        {%endif%}
+    {%endfor%}
+    <br>
+
+    <p>Stampa il numero degli elementi non ancora ciclati <b>forloop.revcounter</b></p>
+    <br>
+    {% for x in list2 %}
+        <i>Numero degli elementi da dover ancora ciclare</i> - {{ forloop.revcounter}}<br>
+            <i>Elemento</i> - {{ x }}<br>
+    {%endfor%}
+    <br>
+
+    <p>Stampa il numero degli elementi non ancora ciclati <b>forloop.revcounter0</b></p>
+    <br>
+    {% for x in list2 %}
+        <i>Numero degli elementi da dover ancora ciclare</i> - {{ forloop.revcounter0}}<br>
+            <i>Elemento</i> - {{ x }}<br>
+    {%endfor%}
+    <br>
+
+    <p>Stampa la sequenza al contrario usando<b>reversed</b><p>Attributo del tag</p><b>for</b>
+    <br>
+    {% for x in list2 reversed %}
+        <i>Elemento</i> - {{ x }}<br>
+    {%endfor%}
+    <br>
+
+</body>
+</html>
