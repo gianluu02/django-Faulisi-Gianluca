@@ -1,4 +1,5 @@
-import os;
+
+
 """
 Django settings for primo_progetto project.
 
@@ -12,6 +13,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import os;
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -39,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'prima_app',
+    'seconda_app'
 ]
 
 MIDDLEWARE = [
@@ -56,11 +59,7 @@ ROOT_URLCONF = 'primo_progetto.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-<<<<<<< Updated upstream
-        'DIRS': [os.path.join(BASE_DIR, 'prima_app/templates')],
-=======
-        'DIRS': [os.path.join(BASE_DIR, 'seconda_app/templates')],
->>>>>>> Stashed changes
+        'DIRS': [os.path.join(BASE_DIR, 'prima_app/templates'),os.path.join(BASE_DIR, 'seconda_app/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
