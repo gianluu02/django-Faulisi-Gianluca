@@ -3,7 +3,7 @@ from django.shortcuts import render
 # Create your views here.
 def view_b(request):
     context={
-        'materie' = ["Matematica","Italiano","Inglese","Storia","Geografia"]
+        'materie' : ["Matematica","Italiano","Inglese","Storia","Geografia"]
     }
     return render(request, "view_b.html", context)
 
